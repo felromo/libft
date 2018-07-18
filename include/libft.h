@@ -51,7 +51,7 @@
 [] ft_itoa
 [-] ft_putchar
 [-] ft_putstr
-[] ft_putendl
+[-] ft_putendl
 [] ft_putnbr
 [] ft_putchar_fd
 [] ft_putstr_fd
@@ -65,5 +65,6 @@ int   ft_isalnum(int c);
 void  ft_putchar(char c);
 void  ft_putstr(char const *s);
 void  ft_putendl(char const *s);
+void  ft_putchar_fd(char c, int fd);
 
 #endif
