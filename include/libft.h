@@ -25,7 +25,7 @@
 [] atoi
 [-] isalpha
 [-] isdigit
-[] isalnum
+[-] isalnum
 [] isascii
 [] isprint
 [] toupper
