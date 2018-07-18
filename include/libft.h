@@ -1,3 +1,5 @@
+#include <string.h>
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -59,6 +61,7 @@
 [] ft_putnbr_fd
 ============================================= */
 
+size_t	ft_strlen(const char *s);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
