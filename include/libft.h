@@ -64,5 +64,6 @@ int   ft_isalpha(int c);
 int   ft_isalnum(int c);
 void  ft_putchar(char c);
 void  ft_putstr(char const *s);
+void  ft_putendl(char const *s);
 
 #endif
