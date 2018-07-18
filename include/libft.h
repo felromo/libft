@@ -50,7 +50,7 @@
 [] ft_strsplit
 [] ft_itoa
 [-] ft_putchar
-[] ft_putstr
+[-] ft_putstr
 [] ft_putendl
 [] ft_putnbr
 [] ft_putchar_fd
@@ -63,5 +63,6 @@ int   ft_isdigit(int c);
 int   ft_isalpha(int c);
 int   ft_isalnum(int c);
 void  ft_putchar(char c);
+void  ft_putstr(char const *s);
 
 #endif

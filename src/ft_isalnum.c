@@ -6,7 +6,7 @@ int     ft_isalnum(int c)
     return (c);
 }
 
-int     main(void)
-{
-    return (0);
-}
+// int     main(void)
+// {
+//     return (0);
+// }
