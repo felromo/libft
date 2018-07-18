@@ -53,7 +53,7 @@
 [-] ft_putstr
 [-] ft_putendl
 [] ft_putnbr
-[] ft_putchar_fd
+[-] ft_putchar_fd
 [] ft_putstr_fd
 [] ft_putendl_fd
 [] ft_putnbr_fd
@@ -66,5 +66,6 @@ void  ft_putchar(char c);
 void  ft_putstr(char const *s);
 void  ft_putendl(char const *s);
 void  ft_putchar_fd(char c, int fd);
+void  ft_putstr_fd(char const *s, ind fd);
 
 #endif
