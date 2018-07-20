@@ -1,5 +1,5 @@
 #include <string.h>
-#include "libft.h"
+#include <libft.h>
 
 void	bzero(void *s, size_t n)
 {
