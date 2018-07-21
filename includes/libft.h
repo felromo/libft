@@ -5,7 +5,7 @@
 
 /* =============================================
 [-] memset
-[] bzero
+[-] bzero
 [] memcpy
 [] memccpy
 [] memmove

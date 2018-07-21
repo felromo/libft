@@ -1,9 +1,9 @@
 CC := gcc
 FLAGS := -Wall -Wextra -Werror
 NAME := libft.a
-SRC := src
+SRC := srcs
 OBJ := obj
-INCLUDE := -Iinclude
+INCLUDE := -Iincludes
 SOURCES := $(wildcard $(SRC)/*.c)
 OBJECTS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
 
