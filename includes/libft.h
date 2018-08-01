@@ -77,6 +77,7 @@ int		ft_tolower(int c);
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+char    *ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
