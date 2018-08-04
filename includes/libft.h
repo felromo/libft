@@ -54,7 +54,7 @@
 [-] ft_putchar
 [-] ft_putstr
 [-] ft_putendl
-[] ft_putnbr
+[-] ft_putnbr
 [-] ft_putchar_fd
 [-] ft_putstr_fd
 [-] ft_putendl_fd
@@ -85,5 +85,6 @@ void    ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
+
 
 #endif
