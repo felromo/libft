@@ -61,6 +61,11 @@
 [] ft_putnbr_fd
 ============================================= */
 
+// Personal Functions
+/* =============================================
+ft_num_len
+============================================= */
+
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
@@ -85,6 +90,8 @@ void    ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
+
+int		ft_num_len(int n);
 
 
 #endif
