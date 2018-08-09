@@ -1,7 +1,8 @@
 #include <libft.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-char    *ft_itoa(int n)
+char    *ft_itoa_old(int n)
 {
 	int len;
 	char *toa;
@@ -13,6 +14,7 @@ char    *ft_itoa(int n)
 	toa = (char *)malloc((sizeof(char) * len) + 1);
 	if (toa)
 	{
+
 		ft_itoa(n / 10);
 		ft_itoa(n % 10);
 	}
@@ -25,4 +27,30 @@ char    *ft_itoa(int n)
 		return (head);
 	}
 	return (NULL);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*buf;
+	int		size;
+	int		len;
+	int		i;
+
+	len = ft_num_len(n);
+	size = (sizeof(char) * len);
+	buf = (char *)malloc(size + 1);
+	if (buf)
+	{
+		i = 0;
+		while (i < len)
+		{
+			// this line here needs to change
+			buf[i] = n + '0';
+			i++;
+		}
+		buf[i] = '\0';
+		return (buf);
+	}
+	return (NULL);
+
 }
