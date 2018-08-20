@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 char    **ft_strsplit(char const *s, char c)
 {
     int     left;
@@ -12,4 +14,5 @@ char    **ft_strsplit(char const *s, char c)
         }
         right++;
     }
+    return (NULL);
 }
