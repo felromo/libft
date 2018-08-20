@@ -1,7 +1,15 @@
-#include <stdlib.h>
 #include <libft.h>
 
 char    *ft_strcpy(char *dst, const char *src)
 {
-    return (ft_memcpy(dst, src, ft_strlen(src)));
+    int i;
+
+    i = 0;
+    while (src[i])
+    {
+        ((char *)dst)[i] = ((char *)src)[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return ((char *)dst);
 }
