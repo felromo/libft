@@ -77,6 +77,7 @@ size_t	ft_strlen(const char *s);
 char    *ft_strdup(const char *s1);
 char    *ft_strcpy(char *dst, const char *src);
 char    *ft_strncpy(char *dst, const char *src, size_t len);
+char    *ft_strcat(char *restrict s1, const char *restrict s2);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
