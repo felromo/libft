@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static char		*int_is_upperb(void)
-{
-	char *res;
+/* static char		*int_is_upperb(void) */
+/* { */
+/* 	char *res; */
 
-	res = ft_strnew(11);
-	if (res != NULL)
-		res = ft_strcpy(res, "-2147483648");
-	return (res);
-}
+/* 	res = ft_strnew(11); */
+/* 	if (res != NULL) */
+/* 		res = ft_strcpy(res, "-2147483648"); */
+/* 	return (res); */
+/* } */
 
 static char		*my_strrev(char *str)
 {
@@ -32,21 +32,6 @@ static char		*my_strrev(char *str)
 	}
 	return (str);
 }
-
-/* static size_t	string_size(int n) */
-/* { */
-/* 	size_t i; */
-
-/* 	i = 0; */
-/* 	if (n < 0) */
-/* 		i++; */
-/* 	while (n != 0) */
-/* 	{ */
-/* 		i++; */
-/* 		n = n / 10; */
-/* 	} */
-/* 	return (i); */
-/* } */
 
 static char		*get_string(char *res, int n)
 {
@@ -74,21 +59,12 @@ char			*ft_itoa(int n)
 {
 	char *res;
 
-	if (n == 0)
-	{
-		res = ft_strnew(1);
-		if (res != NULL)
-			res = ft_strcpy(res, "0");
-		return (res);
-	}
-	else if (n == -2147483648)
-		return (int_is_upperb());
+  if (!n && (res = ft_strnew(1)))
+    res = "0";
+	else if (n == -2147483648 && (res = ft_strnew(11)))
+    res = ft_strcpy(res, "-2147483648");
 	else
-	{
-		res = ft_strnew(ft_num_len(n) + 1);
-		if (res == NULL)
-			return (NULL);
-		res = get_string(res, n);
-		return (res);
-	}
+      if ((res = ft_strnew(ft_num_len(n) + 1)))
+        res = get_string(res, n);
+  return (res);
 }
