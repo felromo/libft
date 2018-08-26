@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/25 22:47:53 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/25 22:47:55 by fromo            ###   ########.fr       */
+/*   Created: 2018/08/26 00:08:12 by fromo             #+#    #+#             */
+/*   Updated: 2018/08/26 00:08:13 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*tmpdst;
-	char		*tmpsrc;
-	size_t		i;
+	char	*tmpdst;
+	char	*tmpsrc;
+	size_t	i;
 
-	tmpdst = (char *)src;
-	tmpsrc = (char *)dst;
+	tmpdst = (char *)dst;
+	tmpsrc = (char *)src;
 	i = 0;
 	if (dst >= src)
 		while (len--)
