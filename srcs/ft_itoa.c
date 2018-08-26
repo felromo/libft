@@ -2,55 +2,93 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char    *ft_itoa_old(int n)
+static char		*int_is_upperb(void)
 {
-	int len;
-	char *toa;
+	char *res;
 
-	// some_method = number -> number of place values
-	len = ft_num_len(n);
-
-	// turn int n into an alpha representation
-	toa = (char *)malloc((sizeof(char) * len) + 1);
-	if (toa)
-	{
-
-		ft_itoa(n / 10);
-		ft_itoa(n % 10);
-	}
-	if ((toa = (char *)malloc(sizeof(char) + 1)))
-	{
-		char *head = toa;
-		*toa = (n + '0');
-		toa++;
-		*toa = '\0';
-		return (head);
-	}
-	return (NULL);
+	res = ft_strnew(11);
+	if (res != NULL)
+		res = ft_strcpy(res, "-2147483648");
+	return (res);
 }
 
-char	*ft_itoa(int n)
+static char		*my_strrev(char *str)
 {
-	char	*buf;
-	int		size;
-	int		len;
 	int		i;
+	int		j;
+	char	tmp;
 
-	len = ft_num_len(n);
-	size = (sizeof(char) * len);
-	buf = (char *)malloc(size + 1);
-	if (buf)
+	i = 0;
+	j = (int)(ft_strlen(str) - 1);
+	if (str[0] == '-')
+		i++;
+	while (i < j)
 	{
-		i = 0;
-		while (i < len)
-		{
-			// this line here needs to change
-			buf[i] = n + '0';
-			i++;
-		}
-		buf[i] = '\0';
-		return (buf);
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
+		i++;
+		j--;
 	}
-	return (NULL);
+	return (str);
+}
 
+/* static size_t	string_size(int n) */
+/* { */
+/* 	size_t i; */
+
+/* 	i = 0; */
+/* 	if (n < 0) */
+/* 		i++; */
+/* 	while (n != 0) */
+/* 	{ */
+/* 		i++; */
+/* 		n = n / 10; */
+/* 	} */
+/* 	return (i); */
+/* } */
+
+static char		*get_string(char *res, int n)
+{
+	int i;
+
+	i = 0;
+	if (n < 0)
+	{
+		res[i] = '-';
+		n = n * (-1);
+		i++;
+	}
+	while (n != 0)
+	{
+		res[i] = (char)(n % 10 + '0');
+		i++;
+		n = n / 10;
+	}
+	res[i] = '\0';
+	res = my_strrev(res);
+	return (res);
+}
+
+char			*ft_itoa(int n)
+{
+	char *res;
+
+	if (n == 0)
+	{
+		res = ft_strnew(1);
+		if (res != NULL)
+			res = ft_strcpy(res, "0");
+		return (res);
+	}
+	else if (n == -2147483648)
+		return (int_is_upperb());
+	else
+	{
+		res = ft_strnew(ft_num_len(n) + 1);
+		if (res == NULL)
+			return (NULL);
+		res = get_string(res, n);
+		return (res);
+	}
 }

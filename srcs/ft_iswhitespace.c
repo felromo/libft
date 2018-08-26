@@ -1,4 +1,4 @@
 int     ft_iswhitespace(char c)
 {
-    return (c == ' ' || c == '\n' || c == '\t');
+  return ((c <= 13 && c >= 9) || c == 32);
 }
