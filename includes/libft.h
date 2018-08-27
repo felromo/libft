@@ -83,6 +83,8 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+t_list				*ft_lstnew(void const *content, size_t content_size);
+
 int					ft_num_len(int n);
 int					ft_iswhitespace(char c);
 
