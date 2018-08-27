@@ -14,6 +14,8 @@
 
 void	ft_strclr(char *s)
 {
+  if (!s)
+    return ;
 	int len;
 
 	len = ft_strlen(s);
