@@ -6,11 +6,10 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:30:18 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/28 01:45:33 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/28 01:49:51 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <libft.h>
 
 static int	arrlen(char *str, char del)
@@ -44,7 +43,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	len = arrlen((char *)s, c);
-	if (!(buf = (char **)malloc((sizeof(char *) * len) + 1)))
+	if (!(buf = (char **)ft_memalloc((sizeof(char *) * len) + 1)))
 		return (NULL);
 	j = 0;
 	while (len--)
