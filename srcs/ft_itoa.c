@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static char		*my_strrev(char *str)
+static char	*my_strrev(char *str)
 {
 	int		i;
 	int		j;
@@ -23,7 +23,7 @@ static char		*my_strrev(char *str)
 	return (str);
 }
 
-static char		*get_string(char *res, int n)
+static char	*get_string(char *res, int n)
 {
 	int i;
 
@@ -45,16 +45,22 @@ static char		*get_string(char *res, int n)
 	return (res);
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char *res;
+	char	*buf;
 
-  if (!n && (res = ft_strnew(1)) && (res = "0"))
-	  ;
-  else if (n == -2147483648 && (res = ft_strnew(11)) && (res = ft_strcpy(res, "-2147483648")))
-	  ;
-  else
-	  if ((res = ft_strnew(ft_num_len(n) + 1)) && (res = get_string(res, n)))
-	  ;
-  return (res);
+	if (!n && (buf = ft_strnew(1))
+			&& (buf = "0"))
+		;
+	else if (n == -2147483648
+			&& (buf = ft_strnew(11))
+			&& (buf = ft_strcpy(buf, "-2147483648")))
+		;
+	else
+	{
+		if ((buf = ft_strnew(ft_num_len(n) + 1))
+				&& (buf = get_string(buf, n)))
+			;
+	}
+	return (buf);
 }
