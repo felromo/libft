@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:21:36 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:23:16 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 18:58:26 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	int		len;
 	char	*buf;
 
-  if (!s)
-    return (NULL);
+	if (!s)
+		return (NULL);
 	outside_index = 0;
 	len = ft_strlen(s);
 	buf = (char *)malloc(sizeof(char) * (len + 1));

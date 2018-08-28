@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:28:25 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:29:38 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:01:46 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strtrim(char const *s)
 	char	*str;
 	char	*buf;
 
-  if (!s)
-    return (NULL);
+	if (!s)
+		return (NULL);
 	start = 0;
 	end = 0;
 	len = ft_strlen(s);

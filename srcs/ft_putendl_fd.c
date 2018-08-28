@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:39:14 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:39:15 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:03:09 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-  if (!s)
-    return ;
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

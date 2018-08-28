@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:30:18 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:32:05 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:27:42 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ char		**ft_strsplit(char const *s, char c)
 	size_t	i;
 	size_t	k;
 
-  if (!s)
-    return (NULL);
+	if (!s)
+		return (NULL);
 	len = arrlen((char *)s, c);
 	if (!(buf = (char **)malloc(sizeof(char *) * (len + 1))))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:27:26 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:27:29 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 18:59:02 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		l2;
 	int		i;
 
-  if (!s1)
-    return (NULL);
+	if (!s1)
+		return (NULL);
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
 	i = 0;

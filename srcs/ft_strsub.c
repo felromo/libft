@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:26:31 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:26:32 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:02:31 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*buf;
 	int		i;
 
-  if (!s)
-    return (NULL);
+	if (!s)
+		return (NULL);
 	buf = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
 	if (buf)

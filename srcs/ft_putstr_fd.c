@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:38:35 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/26 00:38:37 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:18:22 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-  if (!s)
-    return ;
+	if (!s)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);
