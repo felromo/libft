@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_num_len(int n)
+#include <string.h>
+
+size_t	ft_num_len(int n)
 {
+  n *= n < 0 ? -1 : 1;
 	return (n / 10 ? (ft_num_len(n / 10) + 1) : 1);
 }
