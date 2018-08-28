@@ -6,12 +6,12 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:30:18 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/27 21:11:02 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/28 01:45:33 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <stdlib.h>
+#include <libft.h>
 
 static int	arrlen(char *str, char del)
 {
@@ -19,6 +19,7 @@ static int	arrlen(char *str, char del)
 	int	w;
 
 	len = 0;
+	w = 0;
 	while (*str)
 	{
 		if (*str != del)
@@ -30,21 +31,7 @@ static int	arrlen(char *str, char del)
 			w = 0;
 		str++;
 	}
-	return (len);
-}
-
-static char	*inner(char *str, size_t len)
-{
-	char	*buf;
-	char	*tmp;
-
-	buf = ft_strnew(len + 1);
-	tmp = buf;
-	while (len--)
-	{
-		*tmp++ = *str++;
-	}
-	return (buf);
+	return (!len) ? len + w : len;
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -52,14 +39,14 @@ char		**ft_strsplit(char const *s, char c)
 	char	**buf;
 	size_t	len;
 	size_t	i;
-	size_t	k;
+	size_t	j;
 
 	if (!s)
 		return (NULL);
 	len = arrlen((char *)s, c);
 	if (!(buf = (char **)malloc((sizeof(char *) * len) + 1)))
 		return (NULL);
-	k = 0;
+	j = 0;
 	while (len--)
 	{
 		i = 0;
@@ -67,10 +54,10 @@ char		**ft_strsplit(char const *s, char c)
 			s++;
 		while (s[i] != c && s[i])
 			i++;
-		buf[k++] = inner((char*)s, i);
+		buf[j++] = ft_strsub(s, 0, i);
 		while (*s != c && *s)
 			s++;
 	}
-	buf[k] = NULL;
+	buf[j] = NULL;
 	return (buf);
 }
