@@ -49,12 +49,10 @@ char		*ft_itoa(int n)
 {
 	char	*buf;
 
-	if (!n && (buf = ft_strnew(1))
-			&& (buf = "0"))
+	if (!n && (buf = "0"))
 		;
 	else if (n == -2147483648
-			&& (buf = ft_strnew(11))
-			&& (buf = ft_strcpy(buf, "-2147483648")))
+			&& (buf = ft_strcpy(ft_strnew(11), "-2147483648")))
 		;
 	else
 	{
