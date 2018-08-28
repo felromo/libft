@@ -1,27 +1,5 @@
 #include <libft.h>
 #include <stdlib.h>
-#include <stdio.h>
-
-static char	*my_strrev(char *str)
-{
-	int		i;
-	int		j;
-	char	tmp;
-
-	i = 0;
-	j = (int)(ft_strlen(str) - 1);
-	if (str[0] == '-')
-		i++;
-	while (i < j)
-	{
-		tmp = str[i];
-		str[i] = str[j];
-		str[j] = tmp;
-		i++;
-		j--;
-	}
-	return (str);
-}
 
 static char	*get_string(char *res, int n)
 {
@@ -34,14 +12,14 @@ static char	*get_string(char *res, int n)
 		n = n * (-1);
 		i++;
 	}
-	while (n != 0)
+	while (n)
 	{
 		res[i] = (char)(n % 10 + '0');
 		i++;
 		n = n / 10;
 	}
 	res[i] = '\0';
-	res = my_strrev(res);
+	res = ft_strrev(res);
 	return (res);
 }
 
