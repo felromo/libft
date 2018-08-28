@@ -2,16 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* static char		*int_is_upperb(void) */
-/* { */
-/* 	char *res; */
-
-/* 	res = ft_strnew(11); */
-/* 	if (res != NULL) */
-/* 		res = ft_strcpy(res, "-2147483648"); */
-/* 	return (res); */
-/* } */
-
 static char		*my_strrev(char *str)
 {
 	int		i;
@@ -59,12 +49,12 @@ char			*ft_itoa(int n)
 {
 	char *res;
 
-  if (!n && (res = ft_strnew(1)))
-    res = "0";
-	else if (n == -2147483648 && (res = ft_strnew(11)))
-    res = ft_strcpy(res, "-2147483648");
-	else
-      if ((res = ft_strnew(ft_num_len(n) + 1)))
-        res = get_string(res, n);
+  if (!n && (res = ft_strnew(1)) && (res = "0"))
+	  ;
+  else if (n == -2147483648 && (res = ft_strnew(11)) && (res = ft_strcpy(res, "-2147483648")))
+	  ;
+  else
+	  if ((res = ft_strnew(ft_num_len(n) + 1)) && (res = get_string(res, n)))
+	  ;
   return (res);
 }
