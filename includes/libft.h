@@ -6,7 +6,7 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 22:31:36 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/25 22:32:46 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/28 18:04:26 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-size_t			ft_num_len(int n);
+size_t				ft_num_len(int n);
 int					ft_iswhitespace(char c);
 char				*ft_strrev(char *str);
 
