@@ -6,48 +6,50 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 02:25:43 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/28 02:25:45 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/28 18:07:21 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdlib.h>
 
-static char	*get_string(char *res, int n)
+static char	*toa(int n)
 {
-	int i;
+	char	*buf;
+	int		i;
+	size_t	len;
 
 	i = 0;
-	if (n < 0)
+	len = ft_num_len(n);
+	if ((buf = ft_strnew(len)))
 	{
-		res[i] = '-';
-		n = n * (-1);
-		i++;
+		if (n < 0)
+		{
+			*buf = '-';
+			n *= -1;
+		}
+		while (len--)
+		{
+			if (buf[len])
+				break ;
+			buf[len] = (char)(n % 10 + '0');
+			n = n / 10;
+		}
 	}
-	while (n)
-	{
-		res[i] = (char)(n % 10 + '0');
-		i++;
-		n = n / 10;
-	}
-	res[i] = '\0';
-	res = ft_strrev(res);
-	return (res);
+	return (buf);
 }
 
 char		*ft_itoa(int n)
 {
 	char	*buf;
 
-	if (!n && (buf = "0"))
+	if (!n && (buf = ft_strcpy(ft_strnew(1), "0")))
 		;
 	else if (n == -2147483648
 			&& (buf = ft_strcpy(ft_strnew(11), "-2147483648")))
 		;
 	else
 	{
-		if ((buf = ft_strnew(ft_num_len(n) + 1))
-				&& (buf = get_string(buf, n)))
+		if ((buf = toa(n)))
 			;
 	}
 	return (buf);
