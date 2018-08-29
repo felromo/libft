@@ -2,8 +2,7 @@ CC := gcc
 FLAGS := -Wall -Wextra -Werror
 NAME := libft.a
 SRC := .
-# OBJ := obj
-INCLUDE := -Iincludes
+INCLUDE := -I.
 SOURCES = $(SRC)/ft_atoi.c \
 		  $(SRC)/ft_bzero.c \
 		  $(SRC)/ft_isalnum.c \
@@ -86,5 +85,3 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
