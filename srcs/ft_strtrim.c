@@ -6,11 +6,10 @@
 /*   By: fromo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 00:28:25 by fromo             #+#    #+#             */
-/*   Updated: 2018/08/27 19:01:46 by fromo            ###   ########.fr       */
+/*   Updated: 2018/08/28 19:56:21 by fromo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <libft.h>
 
 char	*ft_strtrim(char const *s)
@@ -22,7 +21,7 @@ char	*ft_strtrim(char const *s)
 	char	*buf;
 
 	if (!s)
-		return (NULL);
+		return (ft_strnew(1));
 	start = 0;
 	end = 0;
 	len = ft_strlen(s);
@@ -32,5 +31,5 @@ char	*ft_strtrim(char const *s)
 	while (ft_iswhitespace(*str--))
 		end++;
 	buf = ft_strsub(s, start - 1, (len - ((start - 1) + (end))));
-	return (--start == len ? "" : buf);
+	return (--start == len ? ft_strnew(1) : buf);
 }
