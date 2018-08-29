@@ -1,8 +1,8 @@
 CC := gcc
 FLAGS := -Wall -Wextra -Werror
 NAME := libft.a
-SRC := srcs
-OBJ := obj
+SRC := .
+# OBJ := obj
 INCLUDE := -Iincludes
 SOURCES = $(SRC)/ft_atoi.c \
 		  $(SRC)/ft_bzero.c \
@@ -68,7 +68,7 @@ SOURCES = $(SRC)/ft_atoi.c \
 		  $(SRC)/ft_putstr_fd.c \
 		  $(SRC)/ft_strsub.c \
 
-OBJECTS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
+OBJECTS := $(patsubst $(SRC)/%.c, %.o, $(SOURCES))
 
 all: $(NAME)
 
@@ -76,13 +76,15 @@ $(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
-$(OBJ)/%.o: $(SRC)/%.c
+%.o: $(SRC)/%.c
 	$(CC) $(FLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
-	/bin/rm -f obj/*.o
+	/bin/rm -f *.o
 
 fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
