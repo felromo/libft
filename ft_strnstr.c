@@ -16,106 +16,23 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*cmp;
-	char	*tmp;
-	int		ltmp;
-	int		i;
+  size_t i;
 
-	i = 0;
-	if (!*needle || !ft_strlen(needle))
-		return (char *)haystack;
-	if (!*haystack || !ft_strlen(haystack))
-    return (NULL);
-  if (needle == haystack)
+  if (!*needle)
     return ((char *)haystack);
-	while ((len - i) >= ft_strlen(needle) && *haystack)
-	{
-		cmp = (char *)haystack;
-		tmp = (char *)needle;
-		ltmp = len;
-		while (*tmp && *cmp && ltmp-- && *cmp++ == *tmp && tmp++)
-			;
-		if (ltmp > 0 && !*tmp)
-			return (char *)haystack;
-		haystack++;
-		i++;
-	}
+  if (!*haystack)
+    return (NULL);
+  i = 0;
+  while (haystack[i] && i < len)
+    {
+      if (haystack[i] == *needle)
+        {
+          if ((ft_strlen((char *)needle) + i) > len)
+            return (NULL);
+          if (ft_strnequ((char *)&haystack[i], needle, ft_strlen(needle)))
+            return ((char *)&haystack[i]);
+        }
+      i++;
+    }
   return (NULL);
 }
-
-/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len) */
-/* { */
-/*   char *tmp; */
-/*   char *head = (char *)haystack; */
-/*   char *find; */
-
-/*   if (!ft_strcmp(needle, "")) */
-/*     return ((char *)haystack); */
-
-/*   while (*head && ((int)len - (int)ft_strlen(needle)) > 0) */
-/*     { */
-/*       /\* tmp = ((int)len - (int)(head - haystack) >= 0) ? ft_strsub(head, 0, len) : head; *\/ */
-/*       tmp = len ? ft_strsub(head, 0, len) : head; */
-/*       if ((find = ft_strstr(tmp, needle))) */
-/*         { */
-/*           printf("========\n"); */
-/*           printf("%s\n", find); */
-/*           printf("========\n"); */
-/*           return (find); */
-/*         } */
-/*       head++; */
-/*       len--; */
-/*       /\* ft_memdel((void **)&tmp); *\/ */
-/*     } */
-/*   return (NULL); */
-/* } */
-
-/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len) */
-/* { */
-/* 	char	*cmp; */
-/* 	char	*tmp; */
-
-
-/* 	if (!*needle) */
-/* 		return (char *)haystack; */
-/* 	if (needle == haystack) */
-/* 		return ((char *)haystack); */
-/*   char *test = ft_strsub(haystack, 0, len); */
-/* 	while (*test) */
-/*     { */
-/*       cmp = (char *)test; */
-/*       tmp = (char *)needle; */
-/*       while (*tmp && *cmp == *tmp) */
-/*         { */
-/*           cmp++; */
-/*           tmp++; */
-/*         } */
-/*       if (!*tmp) */
-/*         return (char *)test; */
-/*       test++; */
-/*     } */
-/* 	return (NULL); */
-/* } */
-
-/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len) */
-/* { */
-/*   	char	*cmp; */
-/*   	char	*tmp; */
-/*   	int		ltmp; */
-/*   	int		i; */
-
-/*   	i = 0; */
-/*   	if (!*haystack) */
-/*   		return (NULL); */
-/*   	if (!*needle || haystack == needle) */
-/*   		return (char *)haystack; */
-/*     while ((len - i) >= ft_strlen(needle) && *haystack) */
-/*       { */
-          
-/*       } */
-/* } */
-
-/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len) */
-/* { */
-/*   return strnstr(haystack, needle, len); */
-/* } */
