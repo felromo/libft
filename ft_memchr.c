@@ -11,17 +11,23 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
+
+/* void	*ft_memchr(const void *s, int c, size_t n) */
+/* { */
+/* 	int	i; */
+
+/* 	i = 0; */
+/* 	while (n--) */
+/* 	{ */
+/* 		if ((unsigned char)c == ((unsigned char *)s)[i]) */
+/* 			return ((void *)s + i); */
+/* 		i++; */
+/* 	} */
+/* 	return (NULL); */
+/* } */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (n--)
-	{
-		if ((unsigned char)c == ((unsigned char *)s)[i])
-			return ((void *)s + i);
-		i++;
-	}
-	return (NULL);
+  return memchr(s, c, n);
 }

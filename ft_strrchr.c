@@ -13,13 +13,18 @@
 #include <string.h>
 #include <libft.h>
 
+/* char	*ft_strrchr(const char *s, int c) */
+/* { */
+/* 	int len; */
+
+/* 	len = ft_strlen(s); */
+/* 	while (len-- >= 0) */
+/* 		if (s[len + 1] == (char)c) */
+/* 			return ((char *)&(s[len + 1])); */
+/* 	return (0); */
+/* } */
+
 char	*ft_strrchr(const char *s, int c)
 {
-	int len;
-
-	len = ft_strlen(s);
-	while (len-- >= 0)
-		if (s[len + 1] == (char)c)
-			return ((char *)&(s[len + 1]));
-	return (0);
+  return strrchr(s, c);
 }
