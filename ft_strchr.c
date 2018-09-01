@@ -24,8 +24,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
-/* char	*ft_strchr(const char *s, int c) */
-/* { */
-/*   return strchr(s, c); */
-/* } */

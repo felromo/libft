@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <string.h>
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
@@ -25,8 +24,3 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	s1[i - 2] = '\0';
 	return (s1);
 }
-
-/* char	*ft_strncat(char *s1, const char *s2, size_t n) */
-/* { */
-/*   return strncat(s1, s2, n); */
-/* } */

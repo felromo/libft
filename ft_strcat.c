@@ -23,8 +23,3 @@ char	*ft_strcat(char *s1, const char *s2)
 		;
 	return (s1);
 }
-
-/* char	*ft_strcat(char *s1, const char *s2) */
-/* { */
-/*   return strcat(s1, s2); */
-/* } */

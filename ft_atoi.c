@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
@@ -30,8 +29,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign ? product * -1 : product);
 }
-
-/* int	ft_atoi(const char *str) */
-/* { */
-/*   return atoi(str); */
-/* } */

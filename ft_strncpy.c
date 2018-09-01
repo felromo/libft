@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <string.h>
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
@@ -32,8 +31,3 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	}
 	return (dst);
 }
-
-/* char	*ft_strncpy(char *dst, const char *src, size_t len) */
-/* { */
-/*   return strncpy(dst, src, len); */
-/* } */

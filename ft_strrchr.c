@@ -23,8 +23,3 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&(s[len + 1]));
 	return (0);
 }
-
-/* char	*ft_strrchr(const char *s, int c) */
-/* { */
-/*   return strrchr(s, c); */
-/* } */

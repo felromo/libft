@@ -36,8 +36,3 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	}
 	return (NULL);
 }
-
-/* char	*ft_strstr(const char *haystack, const char *needle) */
-/* { */
-/*   return strstr(haystack, needle); */
-/* } */

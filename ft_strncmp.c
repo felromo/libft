@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <string.h>
-#include <libft.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -26,8 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
-
-/* int	ft_strncmp(const char *s1, const char *s2, size_t n) */
-/* { */
-/*   return strncmp(s1, s2, n); */
-/* } */
