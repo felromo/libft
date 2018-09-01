@@ -22,23 +22,25 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		i;
 
 	i = 0;
-	if (!*haystack)
-		return (NULL);
 	if (!*needle)
 		return (char *)haystack;
+	if (!*haystack)
+    return (NULL);
+  if (needle == haystack)
+    return ((char *)haystack);
 	while ((len - i) >= ft_strlen(needle) && *haystack)
 	{
 		cmp = (char *)haystack;
 		tmp = (char *)needle;
 		ltmp = len;
-		while (*tmp && ltmp-- && *cmp++ == *tmp && tmp++)
+		while (*tmp && ltmp-- && *cmp && *cmp++ == *tmp && tmp++)
 			;
 		if (ltmp > 0 && !*tmp)
 			return (char *)haystack;
 		haystack++;
 		i++;
 	}
-	return (NULL);
+  return (NULL);
 }
 
 /* char	*ft_strnstr(const char *haystack, const char *needle, size_t len) */
