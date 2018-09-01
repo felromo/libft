@@ -22,18 +22,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		i;
 
 	i = 0;
-	if (!*needle)
+	if (!*needle || !ft_strlen(needle))
 		return (char *)haystack;
-	if (!*haystack || !ft_strlen(haystack) || !ft_strlen(needle))
+	if (!*haystack || !ft_strlen(haystack))
     return (NULL);
   if (needle == haystack)
     return ((char *)haystack);
-	while ((int)((int)len - i) >= (int)ft_strlen(needle) && *haystack)
+	while ((len - i) >= ft_strlen(needle) && *haystack)
 	{
 		cmp = (char *)haystack;
 		tmp = (char *)needle;
 		ltmp = len;
-		while (*tmp && ltmp-- && *cmp && *cmp++ == *tmp && tmp++)
+		while (*tmp && *cmp && ltmp-- && *cmp++ == *tmp && tmp++)
 			;
 		if (ltmp > 0 && !*tmp)
 			return (char *)haystack;
