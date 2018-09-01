@@ -23,8 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (counter);
 }
-
-/* size_t	ft_strlen(const char *s) */
-/* { */
-/*   return strlen(s); */
-/* } */

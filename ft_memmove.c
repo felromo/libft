@@ -29,8 +29,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			tmpdst[i - 1] = tmpsrc[i - 1];
 	return (dst);
 }
-
-/* void	*ft_memmove(void *dst, const void *src, size_t len) */
-/* { */
-/*   return memmove(dst, src, len); */
-/* } */

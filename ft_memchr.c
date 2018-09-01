@@ -26,8 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/* void	*ft_memchr(const void *s, int c, size_t n) */
-/* { */
-/*   return memchr(s, c, n); */
-/* } */
