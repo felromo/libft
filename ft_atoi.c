@@ -13,25 +13,25 @@
 #include <libft.h>
 #include <stdlib.h>
 
-/* int	ft_atoi(const char *str) */
-/* { */
-/* 	int				sign; */
-/* 	unsigned long	product; */
-
-/* 	product = 0; */
-/* 	while (ft_iswhitespace(*str)) */
-/* 		str++; */
-/* 	sign = (*str == '-'); */
-/* 	str += (*str == '+' || *str == '-') ? 1 : 0; */
-/* 	while (ft_isdigit(*str)) */
-/* 	{ */
-/* 		product *= 10; */
-/* 		product += (unsigned int)*str++ - 48; */
-/* 	} */
-/* 	return (sign ? product * -1 : product); */
-/* } */
-
 int	ft_atoi(const char *str)
 {
-  return atoi(str);
+	int				sign;
+	unsigned long	product;
+
+	product = 0;
+	while (ft_iswhitespace(*str))
+		str++;
+	sign = (*str == '-');
+	str += (*str == '+' || *str == '-') ? 1 : 0;
+	while (ft_isdigit(*str))
+	{
+		product *= 10;
+		product += (unsigned int)*str++ - 48;
+	}
+	return (sign ? product * -1 : product);
 }
+
+/* int	ft_atoi(const char *str) */
+/* { */
+/*   return atoi(str); */
+/* } */
