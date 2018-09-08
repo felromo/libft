@@ -1,8 +1,8 @@
-CC := gcc
-FLAGS := -Wall -Wextra -Werror
-NAME := libft.a
-SRC := .
-INCLUDE := -I.
+CC = gcc
+FLAGS = -Wall -Wextra -Werror
+NAME = libft.a
+SRC = ./src
+INCLUDE = ./includes/
 SOURCES = $(SRC)/ft_atoi.c \
 		  $(SRC)/ft_bzero.c \
 		  $(SRC)/ft_isalnum.c \
@@ -77,7 +77,7 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 %.o: $(SRC)/%.c
-	$(CC) $(FLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(FLAGS) -I$(INCLUDE) -c $< -o $@
 
 clean:
 	/bin/rm -f *.o
