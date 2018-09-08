@@ -42,6 +42,7 @@ SOURCES = $(SRC)/ft_atoi.c \
 		  $(SRC)/ft_strcpy.c \
 		  $(SRC)/ft_strdel.c \
 		  $(SRC)/ft_strdup.c \
+		  $(SRC)/ft_strndup.c \
 		  $(SRC)/ft_strequ.c \
 		  $(SRC)/ft_striter.c \
 		  $(SRC)/ft_striteri.c \
